@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Alyne 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe4ec, #fff0f5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      color: #8b008b;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #ff69b4;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      background-color: #ffb6c1;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff69b4;
+    }
+
+    .heart {
+      position: fixed;
+      top: -50px;
+      font-size: 20px;
+      color: #ff69b4;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Oi, Alyne! 🌸</h1>
+    <p>
+      Só passei aqui para dizer o quanto você é uma pessoa especial.  
+      Seu carinho e sua luz deixam o dia mais leve 💫  
+      Espero que esse momento traga um sorriso pra você e
+      que saiba quão especial é para alguém 💕
+    </p>
+    <button onclick="playMusic()">Ouvir um carinho 🎶</button>
+  </div>
+
+  <!-- Música instrumental suave (tocada via botão) -->
+  <audio id="musica" src="https://www.bensound.com/bensound-music/bensound-tenderness.mp3" preload="auto"></audio>
+
+  <script>
+    function playMusic() {
+      const audio = document.getElementById('musica');
+      audio.play();
+    }
+
+    function criarCoracao() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '🌸';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (2 + Math.random() * 3) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    setInterval(criarCoracao, 350);
+  </script>
+
+</body>
+</html>
