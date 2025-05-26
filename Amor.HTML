@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Para o Amor da Minha Vida</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px;
+      color: #c2185b;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .mensagem {
+      background-color: #fff;
+      padding: 30px;
+      margin: 20px auto;
+      border-radius: 15px;
+      max-width: 700px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      font-size: 1.2em;
+      line-height: 1.7em;
+      color: #333;
+    }
+
+    #buttons {
+      position: relative;
+      height: 200px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .yes {
+      background-color: #c2185b;
+      color: white;
+    }
+
+    .no {
+      background-color: #f8d7da;
+      color: #842029;
+      position: absolute;
+    }
+
+    @keyframes float {
+      0% { left: 0; top: 0; }
+      25% { left: 80%; top: 20%; }
+      50% { left: 30%; top: 60%; }
+      75% { left: 70%; top: 80%; }
+      100% { left: 0; top: 0; }
+    }
+
+    .moving {
+      animation: float 4s infinite linear;
+    }
+
+    #video {
+      display: none;
+      margin-top: 30px;
+    }
+
+    iframe {
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Me perdoa, meu amor? ❤️</h1>
+
+  <div class="mensagem">
+    <p>Amor, eu sei que você está magoada, e tem todo direito de se sentir assim.</p>
+    <p>Mas eu preciso que você saiba de uma coisa: <strong>nada nem ninguém no mundo se compara a você.</strong></p>
+    <p>Se eu fiz algo que pareceu errado, me desculpa. Minha intenção jamais foi te ferir ou fazer você se sentir menos importante.</p>
+    <p>Eu estou aprendendo — com erros e acertos — a ser mais empático, a enxergar melhor como você se sente. Isso é algo que eu tenho buscado mudar em mim, porque <strong>você merece alguém que te valorize de verdade</strong>.</p>
+    <p>Você é minha parceira, meu porto seguro, a mulher que eu admiro, que me encanta, que me faz querer ser melhor.</p>
+    <p>E se às vezes você duvida de si mesma, deixa eu te lembrar: <strong>você é incrível. Forte. Linda. Insubstituível.</strong></p>
+    <p>Não existe outra no mundo que ocupe o seu lugar. E nunca vai existir.</p>
+    <p>Eu te amo, e quero te provar isso com atitudes, carinho e o respeito que você merece.</p>
+    <p><strong>Me dá a chance de mostrar que meu coração é só seu?</strong></p>
+  </div>
+
+  <div id="buttons">
+    <button class="btn yes" onclick="playVideo()">Sim</button>
+    <button class="btn no moving">Não</button>
+  </div>
+
+  <div id="video">
+    <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/8mVbdjec0pA?autoplay=1" 
+      title="Gabrielle Aplin - Home (Official Video)" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen></iframe>
+  </div>
+
+  <script>
+    const noBtn = document.querySelector(".no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.floor(Math.random() * 80);
+      const y = Math.floor(Math.random() * 80);
+      noBtn.style.left = `${x}%`;
+      noBtn.style.top = `${y}%`;
+    });
+
+    function playVideo() {
+      document.getElementById("video").style.display = "block";
+      alert("Te amo! 💕");
+    }
+  </script>
+
+</body>
+</html>
+
