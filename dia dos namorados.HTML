@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feliz Dia dos Namorados ❤️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #ff6699;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .content {
+      background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro transparente */
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+      margin-top: 60px;
+      border-radius: 20px;
+      text-align: center;
+    background: url(fotinha.jpg);
+    background-position-x: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    p {
+      font-size: 1.4em;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .btn-surpresa {
+      background: #ff6699;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn-surpresa:hover {
+      background: #ff3366;
+    }
+
+    .surpresa {
+      display: none;
+      margin-top: 40px;
+      animation: aparecer 2s forwards;
+    }
+
+    audio {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      p { font-size: 1.1em; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h1>Feliz Dia dos Namorados ❤️</h1>
+    <p>
+      Hoje é o nosso dia, mas todo dia é especial ao seu lado. <br>
+      Você é minha melhor escolha, meu sorriso preferido e o motivo do meu coração bater mais forte. <br>
+      Te amo mais do que palavras podem dizer.
+    </p>
+
+    <button class="btn-surpresa" onclick="mostrarSurpresa()">Clique para uma surpresa 💌</button>
+
+    <div class="surpresa" id="surpresa">
+      <p><strong>💖 Nosso amor é a minha maior sorte.</strong> <b
+r>
+      Vamos reviver momentos especiais juntos?</p>
+
+      <!-- MÚSICA -->
+      <audio controls autoplay>
+        <source src="ESPERANDO NA JANELA - COGUMELO PLUTÃO.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio HTML5.
+      </audio>
+    </div>
+  </div>
+
+  <script>
+    function mostrarSurpresa() {
+      document.getElementById("surpresa").style.display = "block";
+      document.getElementById("surpresa").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
